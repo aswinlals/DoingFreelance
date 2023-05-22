@@ -5,7 +5,7 @@ import logo from "../src/assets/doingfreelance.png";
 //  import { Link } from "react-router-dom";
 // import { Route ,Routes } from 'react-router-dom';
 
-// import AboutUs from "./aboutus.js";
+import AboutUs from "./aboutus";
 
 const App = () => {
   return (
@@ -21,7 +21,7 @@ const App = () => {
           <li><a href="joblist.html">Browse Freelancers</a></li>
           <li><a href="postjob.html">Register as a Freelancer</a></li>
           <li><a href="howitworks.html">How it Works</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="/aboutus">About Us</a></li>
         </ul>
       </nav>
 
