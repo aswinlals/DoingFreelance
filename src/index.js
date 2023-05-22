@@ -11,20 +11,19 @@ const App = () => {
   return (
     <div>
       <header>
-        <a href="index.html">
+        <a href="#">
           <img id="logo" src={logo} alt="DoingFreelance Logo" width="200" />
         </a>
 
         <nav>
-          {/* <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About Us</Link>
-            </li>
-          </ul> */}
-        </nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="joblist.html">Browse Freelancers</a></li>
+          <li><a href="postjob.html">Register as a Freelancer</a></li>
+          <li><a href="howitworks.html">How it Works</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+      </nav>
 
         <button id="connect-wallet">Connect Wallet</button>
       </header>
@@ -35,7 +34,7 @@ const App = () => {
           <img id="logo" src={logo} alt="DoingFreelance Logo" width="300" />
         </div>
 
-        <h2>The decentralized marketplace for freelancers</h2>
+        <h2>The decentralized freelance marketplace</h2>
         <div id="how-it-works">
           <ul style={{ listStyle: "none" }}>
             <li>
