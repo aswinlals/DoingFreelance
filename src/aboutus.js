@@ -18,7 +18,7 @@ export default AboutUs;
 // import "../src/style.css";
 // import logo from "../src/assets/doingfreelance.png";
 
-// const AboutUsPage = () => {
+// const AboutUs = () => {
 //   return (
 //     <div>
 //       <header>
@@ -95,6 +95,6 @@ export default AboutUs;
 //     </div>
 //   );
 // };
-// export default AboutUsPage;
+// export default AboutUs;
 
 

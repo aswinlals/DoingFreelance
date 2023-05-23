@@ -2,13 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "../src/style.css";
 import logo from "../src/assets/doingfreelance.png";
-//  import { Link } from "react-router-dom";
-// import { Route ,Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 
 import AboutUs from "./aboutus";
 
+
+
+
 const App = () => {
   return (
+    <Router>
     <div>
       <header>
         <a href="#">
@@ -17,11 +20,11 @@ const App = () => {
 
         <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="joblist.html">Browse Freelancers</a></li>
-          <li><a href="postjob.html">Register as a Freelancer</a></li>
-          <li><a href="howitworks.html">How it Works</a></li>
-          <li><a href="/aboutus">About Us</a></li>
+          {/* <li><Link to="/">Home</Link></li>
+          <li><Link to="/">Browse Freelancers</Link></li>
+          <li><Link to="/">Register as Freelancer</Link></li> */}
+          <li><Link to="/aboutus">About Us</Link></li>
+          {/* <li><Link to="/">How it works</Link></li> */}
         </ul>
       </nav>
 
@@ -73,6 +76,14 @@ const App = () => {
         <p>DoingFreelance © 2023</p>
       </footer>
     </div>
+
+<Routes>
+  <Route path="/aboutus" element={<AboutUs/>} />
+    
+  
+</Routes>
+
+    </Router>
   );
 };
 
