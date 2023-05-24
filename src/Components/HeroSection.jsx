@@ -39,10 +39,10 @@ const HeroSection = () => {
             </li>
           </ul>
         </div>
-        <div id="signup-buttons">
+        {/* <div id="signup-buttons">
           <button id="freelancer-signup">Sign up as a Freelancer</button>
           <button id="customer-signup">Sign up as a Customer</button>
-        </div>
+        </div> */}
       </main>
   )
 }

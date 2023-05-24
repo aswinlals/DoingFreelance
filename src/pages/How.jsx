@@ -1,5 +1,7 @@
 import React from 'react'
 import Navbar from '../Components/Navbar';
+import SignUpButtons from '../Components/SignUpButtons';
+import Footer from '../Components/Footer';
 
 const How = () => {
   return (
@@ -10,6 +12,8 @@ const How = () => {
       <p>you can edit the section , go to Pages/About.jsx</p>
       <p>To reuse the Components, Navigate to src/Components</p>
       </center>
+      <SignUpButtons/>
+      <Footer/>
     </div>
   )
 }
