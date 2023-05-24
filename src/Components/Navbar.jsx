@@ -14,11 +14,11 @@ const navbar = () => {
 
         <nav>
         <ul>
-          {/* <li><Link to="/">Home</Link></li>
-          <li><Link to="/">Browse Freelancers</Link></li>
-          <li><Link to="/">Register as Freelancer</Link></li> */}
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/browse">Browse Freelancers</Link></li>
+          <li><Link to="/postjob">Register as Freelancer</Link></li>
           <li><Link to="/about">About Us</Link></li>
-          {/* <li><Link to="/">How it works</Link></li> */}
+          <li><Link to="/how">How it works</Link></li>
         </ul>
       </nav>
 
