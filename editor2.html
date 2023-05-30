@@ -1,10 +1,6 @@
-import { useState } from 'react';
-import React from 'react'
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
-import '../stylesheets/formstyle.css';
+import React, { useState } from 'react';
 
-function Postjob() {
+const MyForm = () => {
   const [firstName, setFirstName] = useState('');
   const [middleName, setMiddleName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -15,21 +11,19 @@ function Postjob() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`Welcome ${firstName}. You are succesfully registered !`)
-  }
+    // Handle form submission logic here
+    // You can access the form field values using the state variables (e.g., firstName, middleName, etc.)
+  };
 
   return (
-    <div>
-      <Navbar/>
-      <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <label>
-        First Name:<span className="required"></span>
+        First Name:
         <input
           type="text"
           value={firstName}
           onChange={(event) => setFirstName(event.target.value)}
           required
-          className="required"
         />
       </label>
       <br />
@@ -39,32 +33,32 @@ function Postjob() {
           type="text"
           value={middleName}
           onChange={(event) => setMiddleName(event.target.value)}
-          required 
+          required
         />
       </label>
       <br />
       <label>
-        Last Name:<span className="required"></span>
+        Last Name:
         <input
           type="text"
           value={lastName}
           onChange={(event) => setLastName(event.target.value)}
-          required className="required"
+          required
         />
       </label>
       <br />
       <label>
-        Languages Known:<span className="required"></span>
+        Languages Known:
         <input
           type="text"
           value={languagesKnown}
           onChange={(event) => setLanguagesKnown(event.target.value)}
-          required 
+          required
         />
       </label>
       <br />
       <label>
-        Skills: <span className="required"></span>
+        Skills:
         <input
           type="text"
           value={skills}
@@ -74,12 +68,11 @@ function Postjob() {
       </label>
       <br />
       <label>
-        Experience Level:<span className="required"></span>
+        Experience Level:
         <select
           value={experienceLevel}
           onChange={(event) => setExperienceLevel(event.target.value)}
           required
-          className="selectStyle"
         >
           <option value="Entry">Entry</option>
           <option value="Intermediate">Intermediate</option>
@@ -88,7 +81,7 @@ function Postjob() {
       </label>
       <br />
       <label>
-        Portfolio link:<span className="required"></span>
+        Portfolio link:
         <input
           type="url"
           value={portfolioLink}
@@ -99,10 +92,7 @@ function Postjob() {
       <br />
       <input type="submit" value="Submit" />
     </form>
-    <Footer/>
-    </div>
-  )
-}
+  );
+};
 
-
-export default Postjob
+export default MyForm;

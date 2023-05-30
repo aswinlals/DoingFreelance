@@ -1,0 +1,133 @@
+import Navbar from '../Components/Navbar';
+import React, { useState } from 'react';
+import "../stylesheets/formstyle.css";
+
+
+
+const Postjob = () => {
+  return (
+    <div>
+      <Navbar/>
+      
+      
+
+
+  const [firstName, setFirstName] = useState('');
+  const [middleName, setMiddleName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [languagesKnown, setLanguagesKnown] = useState('');
+  const [skill, setSkill] = useState('');
+  const [experienceLevel, setExperienceLevel] = useState('');
+  const [portfolioLink, setPortfolioLink] = useState('');
+
+  const handleSubmit = (event) ={
+    event.preventDefault()
+    // Handle form submission logic here
+    // You can access the form data using the state variables above
+  };
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="first-name">
+          First Name: <span className="required">*</span>
+        </label>
+        <input
+          type="text"
+          id="first-name"
+          name="first-name"
+          required
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+        /><br />
+
+        <label htmlFor="middle-name">Middle Name:</label>
+        <input
+          type="text"
+          id="middle-name"
+          name="middle-name"
+          value={middleName}
+          onChange={(e) => setMiddleName(e.target.value)}
+        /><br />
+
+        <label htmlFor="last-name">
+          Last Name: <span className="required">*</span>
+        </label>
+        <input
+          type="text"
+          id="last-name"
+          name="last-name"
+          required
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
+        /><br />
+
+        <label htmlFor="languages-known">
+          Languages Known: <span className="required">*</span>
+        </label>
+        <input
+          type="text"
+          id="languages-known"
+          name="languages-known"
+          required
+          value={languagesKnown}
+          onChange={(e) => setLanguagesKnown(e.target.value)}
+        /><br />
+
+        <label htmlFor="skill">
+          Skill: <span className="required">*</span>
+        </label>
+        <input
+          type="text"
+          id="skill"
+          name="skill"
+          required
+          value={skill}
+          onChange={(e) => setSkill(e.target.value)}
+        /><br />
+
+        <label htmlFor="experience-level">
+          Experience Level: <span className="required">*</span>
+        </label>
+        <select
+          id="experience-level"
+          name="experience-level"
+          required
+          value={experienceLevel}
+          onChange={(e) => setExperienceLevel(e.target.value)}
+        >
+          <option value="">Please select your experience level</option>
+          <option value="Entry Level">Entry Level</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Expert">Expert</option>
+        </select><br />
+
+        <label htmlFor="portfolio-link">
+          Portfolio Link: <span className="required">*</span>
+        </label>
+        <input
+          type="url"
+          id="portfolio-link"
+          name="portfolio-link"
+          required
+          value={portfolioLink}
+          onChange={(e) => setPortfolioLink(e.target.value)}
+        /><br />
+
+        <div id="submitbutton">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+  );
+
+
+
+
+    </div>
+
+
+  )
+}
+
+export default Postjob
