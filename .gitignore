@@ -5,8 +5,8 @@
 /.pnp
 .pnp.js
 githubcommands.txt
-editor.js
-editor2.js
+editor.html
+editor2.html
 
 # testing
 /coverage
