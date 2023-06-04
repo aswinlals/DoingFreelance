@@ -1,10 +1,14 @@
-import { useState } from 'react';
-import React from 'react'
+import { useState , useEffect} from 'react';
+import React from 'react';
+import { useNavigate , Link} from 'react-router-dom';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import '../stylesheets/formstyle.css';
+import { walletAddress } from '../Components/Navbar';
+
 
 function Postjob() {
+  const history=useNavigate();
   const [firstName, setFirstName] = useState('');
   const [middleName, setMiddleName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -12,16 +16,54 @@ function Postjob() {
   const [skills, setSkills] = useState('');
   const [experienceLevel, setExperienceLevel] = useState('Entry');
   const [portfolioLink, setPortfolioLink] = useState('');
+  const [walletAddress, setWalletAddress] = useState('');
 
-  const handleSubmit = (event) => {
+
+ 
+
+  async function submit(event) {
     event.preventDefault();
-    alert(`Welcome ${firstName}. You are succesfully registered !`)
+  
+    const formData = {
+      firstName,
+      middleName,
+      lastName,
+      languagesKnown,
+      skills,
+      experienceLevel,
+      portfolioLink,
+      walletAddress,
+    };
+  
+    try {
+      const response = await fetch('/postjob', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (response.ok) {
+        alert(`Welcome ${firstName}. You are successfully registered!`);
+      } else {
+        alert('Failed to submit the form');
+      }
+    } catch (error) {
+      console.error('Failed to submit the form', error);
+      alert('Failed to submit the form');
+    }
   }
+
+
+  
+
+
 
   return (
     <div>
       <Navbar/>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={submit} action='POST'>
       <label>
         First Name:<span className="required"></span>
         <input
@@ -53,6 +95,8 @@ function Postjob() {
         />
       </label>
       <br />
+
+
       <label>
         Languages Known:<span className="required"></span>
         <input
@@ -96,8 +140,21 @@ function Postjob() {
           required
         />
       </label>
+
+      <label>
+          Wallet Address:<span className="required"></span>
+          <input
+            type="text"
+            value={walletAddress}
+            readOnly
+            className="required"
+          />
+        </label>
+
+
       <br />
-      <input type="submit" value="Submit" />
+      
+      <button onClick={submit}>Register</button>
     </form>
     <Footer/>
     </div>
