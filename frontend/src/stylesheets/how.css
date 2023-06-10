@@ -1,0 +1,49 @@
+/* how.css */
+
+.how-it-works {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .how-it-works h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .how-it-works p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .how-it-works .step {
+    margin-bottom: 40px;
+  }
+  
+  .how-it-works .step h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .how-it-works .step p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+  
+  .how-it-works .signup-buttons {
+    margin-top: 40px;
+  }
+  
+  .how-it-works .footer {
+    margin-top: 60px;
+  }
+  

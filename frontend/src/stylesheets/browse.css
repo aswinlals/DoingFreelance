@@ -1,0 +1,41 @@
+/* browse.css */
+
+.freelancers-list {
+    margin: 20px;
+  }
+  
+  .freelancer-card {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .hire-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: auto;
+  }
+  
+  .freelancer-details {
+    margin-left: 20px;
+  }
+  
+  .freelancer-card h2 {
+    color: #333;
+  }
+  
+  .freelancer-card p {
+    margin: 10px 0;
+  }
+  
+  .freelancer-card a {
+    color: #0066cc;
+  }
+  
