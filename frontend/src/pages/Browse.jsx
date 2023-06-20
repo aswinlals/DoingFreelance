@@ -25,14 +25,15 @@ const Browse = () => {
       <Navbar />
       <h1>Browse Freelancers</h1>
 
-      
-        <div className="freelancers">
-          {freelancers &&
-            freelancers.map((freelancer) => (
-              <FreelancerDetails freelancer={freelancer} key={freelancer._id} />
-            ))}
-        </div>
-      
+      <div className="freelancers-container">
+        {freelancers &&
+          freelancers.map((freelancer) => (
+            <div className="freelancer-box" key={freelancer._id}>
+              <FreelancerDetails freelancer={freelancer} />
+              <button className="hire-button">Hire</button>
+            </div>
+          ))}
+      </div>
     </div>
   );
 };

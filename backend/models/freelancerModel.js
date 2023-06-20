@@ -23,12 +23,12 @@ const freelancerSchema = new Schema({
       },
       portfolioLink: {
         type: String,
-        required: true,
+        required: false,
       },
 
       walletAddress: {
         type: String,
-        required: false,
+        required: true,
       }
 
 

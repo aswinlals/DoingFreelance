@@ -1,29 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "../style.css";
 import logo from "../assets/doingfreelance.png";
 import { Link } from "react-router-dom";
+import { WalletContext } from "../scripts/WalletContext";
 
 const Navbar = () => {
-  const [walletAddress, setWalletAddress] = useState(null);
-
-  async function connectWallet() {
-    if (walletAddress) {
-      // Disconnect wallet
-      setWalletAddress(null);
-    } else if (typeof window.ethereum !== "undefined") {
-      try {
-        const accounts = await window.ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        const address = accounts[0];
-        setWalletAddress(address);
-      } catch (error) {
-        console.log("Error connecting wallet:", error);
-      }
-    } else {
-      console.log("No MetaMask!");
-    }
-  }
+  const { walletAddress, connectWallet } = useContext(WalletContext);
 
   return (
     <div>
@@ -69,5 +51,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
